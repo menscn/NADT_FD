@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数字孪生系统</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" type="text/css" href="css/customize.css">
+  <link href="//unpkg.com/layui@2.6.9/dist/css/layui.css" rel="stylesheet">
+  <script src="js/pep.min.js"></script>
+  <script src="js/babylon.js"></script>
+  <script src="js/babylonjs.loaders.min.js"></script>
+  <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header>
+    <h1>喷管装配数字孪生系统</h1>
+  </header>
+
+  <!-- 页面主体 -->
+  <section class="mainbox">
+    <!-- 左侧盒子 -->
+    <div class="column">
+      <div class="panel robotJoints">
+        <h2>机器人关节数据监测</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel current">
+        <h2>机器人电流统计</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel fixtureForce">
+        <h2>机械手夹具力</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+    <!-- 中间盒子 -->
+    <div class="column">
+      <!-- map模块 -->
+      <div class="map">
+        <!-- 1.Canvas画布 -->
+        <div style="display: inline-block">
+          <canvas id="renderCanvas"></canvas>
+        </div>
+        <div style="background-color: rgb(49, 94, 138); padding-top: 6px;padding-left: 100px;">
+          <div class="layui-row">
+            <div class="layui-col-xs4">
+              <button type="button" id="visible"
+                class="layui-btn layui-btn-lg layui-btn-normal layui-btn-radius">虚实同步（test）</button>
+            </div>
+            <div class="layui-col-xs4">
+              <button type="button" id="visible1"
+                class="layui-btn layui-btn-lg layui-btn-normal layui-btn-radius">历史回放</button></button>
+            </div>
+            <div class="layui-col-xs4">
+              <button type="button" id="hide1"
+                class="layui-btn layui-btn-lg layui-btn-warm layui-btn-radius">数据切换</button>
+            </div>
+          </div>
+          <div class="layui-row" style="padding-bottom: 5px;padding-top: 10px;">
+            <div class="layui-col-xs4">
+              <button type="button" id="hide"
+                class="layui-btn layui-btn-lg layui-btn-warm layui-btn-radius">视角一</button></button>
+            </div>
+            <div class="layui-col-xs4">
+              <button type="button" id="view2"
+                class="layui-btn layui-btn-lg layui-btn-danger layui-btn-radius">视角二</button></button>
+            </div>
+            <div class="layui-col-xs4">
+              <button id="view1" type="button" class="layui-btn layui-btn-lg layui-btn-danger layui-btn-radius"
+                id="view1">暂停回放/继续</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 右侧盒子 -->
+    <div class="column">
+      <div class="panel">
+        <h2>监控视频</h2>
+        <img src="./images/monitor.jpg" style="width: 400px;height: 250px;margin-left: 30px;">
+      </div>
+      <div class="panel  dirGarph">
+        <h2>误差传递模型</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel">
+        <h2>功能控制模块</h2>
+        <h2>关键装配节点、误差源及优化方案</h2>
+        <div class="layui-row">
+          <div class="layui-col-md5" style="margin-left: 25px;">
+            <div class="layui-card">
+              <div class="layui-card-header">关键装配节点</div>
+              <div class="layui-card-body">
+                XXX
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-md5" style="margin-left: 25px;">
+            <div class="layui-card">
+              <div class="layui-card-header">误差源节点</div>
+              <div class="layui-card-body">
+                XXX
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-md12" style="margin-top: 15px;">
+            <div class="layui-card">
+              <div class="layui-card-header">优化方案</div>
+              <div class="layui-card-body">
+                方案一<br>
+                方案二<br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/flexible.js"></script>
+  <script src="js/echarts.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/index/scene.js"></script>
+  <script src="js/index/motion.js"></script>
+  <script src="js/index/miserables.js"></script>
+  <script src="js/index/current.js"></script>
+  <script src="js/index/robotJoints.js"></script>
+  <script src="js/index/fixtureForce.js"></script>
+</body>
+
+</html>

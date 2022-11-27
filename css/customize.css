@@ -1,0 +1,73 @@
+#renderCanvas{
+    width: 846px;
+    height: 850px;
+}
+.interPane{
+    margin-top: 0.15rem;
+    background-color: rgba(192, 192, 192, 0.8);
+}
+.rev0{
+    width: 80px;
+    height: 50px;
+    /*border-style: solid;*/
+    /*border-width: 2px;*/
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.rev{
+    width: 60px;
+    height: 20px;
+    border-width: 2px;
+    font-size: 20px;
+    font-weight: bold;
+    color: gold;
+    border-bottom: solid 1px white;
+}
+button{
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 20px 5px 20px;
+    background-color: orange;
+}
+#close{
+    margin-left: 56px;
+}
+#open{
+    margin-left: 20px;
+}
+#floor1{
+    margin-left: 50px;
+}
+.header-model{
+    /*background-color: orange;*/
+    position: absolute;
+    top: 1.5rem;
+    left: 7rem;
+    font-size: 0.25rem;
+    color: white;
+    z-index: 1;
+}
+.paraTable{
+    margin-top: 0.3rem;
+}
+.paraTable td{
+    height:0.8rem;
+    line-height:150%;
+}
+.paraName{
+    text-align:center;
+    font-family: 微软雅黑;
+    font-size: 0.2rem;
+    font-weight: bold;
+    color: white;
+}
+.paraValue{
+    text-align:center;
+    font-family: 微软雅黑;
+    font-size: 0.2rem;
+    font-weight: bold;
+    color: gold;
+}
